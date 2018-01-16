@@ -3,7 +3,7 @@
 namespace AaronAdrian\Bootpack;
 
 use Illuminate\Support\ServiceProvider;
-use ConsoleTVs\Bootpack\Commands\BootpackCreatePackage;
+use AaronAdrian\Bootpack\Commands\BootpackCreatePackage;
 
 class BootpackServiceProvider extends ServiceProvider
 {
