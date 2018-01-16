@@ -13,7 +13,7 @@ class BootpackCreatePackage extends Command
      *
      * @var string
      */
-    protected $signature = 'bootpack:create {name : Package name} {--path : Location to create the package}';
+    protected $signature = 'bootpack:create {name : Package name} {--path= : Location to create the package}';
 
     /**
      * The console command description.
