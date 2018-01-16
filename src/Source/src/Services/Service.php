@@ -1,10 +1,10 @@
 <?php
 
-namespace {{ NAMESPACE }}\Classes;
+namespace {{ NAMESPACE }}\Services;
 
 use {{ NAMESPACE }}\Contracts\{{ UCNAME }}Contract;
 
-Class {{ UCNAME }}Class implements {{ UCNAME }}Contract
+Class {{ UCNAME }}Service implements {{ UCNAME }}Contract
 {
     //
 }
