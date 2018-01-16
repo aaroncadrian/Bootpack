@@ -4,7 +4,7 @@ namespace AaronAdrian\Bootpack\Commands;
 
 use ConsoleTVs\Support\Helpers;
 use Illuminate\Console\Command;
-use ConsoleTVs\Bootpack\Classes\Package;
+use AaronAdrian\Bootpack\Classes\Package;
 
 class BootpackCreatePackage extends Command
 {
