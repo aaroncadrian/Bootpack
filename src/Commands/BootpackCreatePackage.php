@@ -76,7 +76,7 @@ class BootpackCreatePackage extends Command
         $this->handlePath();
 
         if ($this->confirm('The package creation is going to start, type yes to begin', 'yes')) {
-            if (!is_dir($path)) {
+            if (!is_dir($this->path)) {
                 $this->comment('Creating the root folder...');
                 mkdir($path, 0777, true);
                 $this->info("Project root created at: {$path}");
