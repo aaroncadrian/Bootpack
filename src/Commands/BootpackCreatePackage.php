@@ -90,36 +90,36 @@ class BootpackCreatePackage extends Command
                 Helpers::massStrReplaceFile('{{ UCNAME }}', ucfirst($p_name), $path);
 
                 rename(
-                    $path . '/src/Config/config.php',
-                    $path . '/src/Config/' . $p_name . '.php'
+                    $path . '/publishable/config/config.php',
+                    $path . '/publishable/config/' . $p_name . '.php'
                 );
                 rename(
                     $path . '/src/ServiceProvider.php',
                     $path . '/src/' . ucfirst($p_name) . 'ServiceProvider.php'
                 );
                 rename(
-                    $path . '/src/Controllers/Controller.php',
-                    $path . '/src/Controllers/' . ucfirst($p_name) . 'Controller.php'
+                    $path . '/src/Http/Controllers/Controller.php',
+                    $path . '/src/Http/Controllers/' . ucfirst($p_name) . 'Controller.php'
                 );
                 rename(
                     $path . '/src/Commands/Command.php',
                     $path . '/src/Commands/' . ucfirst($p_name) . 'Command.php'
                 );
                 rename(
-                    $path . '/src/Middleware/Middleware.php',
-                    $path . '/src/Middleware/' . ucfirst($p_name) . 'Middleware.php'
+                    $path . '/src/Http/Middleware/Middleware.php',
+                    $path . '/src/Http/Middleware/' . ucfirst($p_name) . 'Middleware.php'
                 );
                 rename(
-                    $path . '/src/Migrations/2017_08_11_171401_create_some_table.php',
-                    $path . '/src/Migrations/2017_08_11_171401_create_' . ucfirst($p_name) . '_table.php'
+                    $path . '/src/publishable/migrations/2017_08_11_171401_create_some_table.php',
+                    $path . '/src/publishable/migrations/2017_08_11_171401_create_' . ucfirst($p_name) . '_table.php'
                 );
                 rename(
                     $path . '/src/Contracts/Contract.php',
                     $path . '/src/Contracts/' . ucfirst($p_name) . 'Contract.php'
                 );
                 rename(
-                    $path . '/src/Classes/Class.php',
-                    $path . '/src/Classes/' . ucfirst($p_name) . 'Class.php'
+                    $path . '/src/Services/Service.php',
+                    $path . '/src/Services/' . ucfirst($p_name) . 'Service.php'
                 );
 
                 $this->info('Yey! The package structure is ready for action!');
