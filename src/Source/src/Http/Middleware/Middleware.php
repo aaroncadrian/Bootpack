@@ -1,6 +1,6 @@
 <?php
 
-namespace {{ NAMESPACE }}\Middleware;
+namespace {{ NAMESPACE }}\Http\Middleware;
 
 use Auth;
 use Closure;
