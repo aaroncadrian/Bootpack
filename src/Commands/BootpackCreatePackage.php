@@ -22,6 +22,13 @@ class BootpackCreatePackage extends Command
      */
     protected $description = 'Create a new package';
 
+    protected $vendorName;
+    protected $packageName;
+    protected $path;
+    protected $namespace;
+    protected $miniNamespace;
+    protected $fullPackageName;
+
     /**
      * Create a new command instance.
      *
@@ -32,6 +39,32 @@ class BootpackCreatePackage extends Command
         parent::__construct();
     }
 
+    protected function handleName()
+    {
+        $name = explode('/', $this->argument('name'));
+        $this->packageName = $name[1];
+        $this->vendorName = $name[0];
+    }
+
+    protected function handlePath()
+    {
+
+        $path = config('bootpack.base_path', 'packages') . '/' . $this->packageName;
+        $pathOption = $this->option('path');
+
+        if(!is_null($pathOption))
+        {
+            $path = $pathOption;
+        }
+
+        $this->path = base_path($path);
+
+        while(!$this->confirm('The package root will be ' . $this->path . '. Is that ok?', 'yes'))
+        {
+            $this->path = base_path($this->ask('Please enter the path for the package root'));
+        }
+    }
+
     /**
      * Execute the console command.
      *
@@ -39,14 +72,9 @@ class BootpackCreatePackage extends Command
      */
     public function handle()
     {
-        $name = explode('/', $this->argument('name'));
-        $p_name = $name[1];
-        $name = $name[0] . '/' . $name[1];
-        $path = $this->option('path') ? base_path($this->option('path')) : base_path(config('bootpack.base_path') . '/' . $name);
+        $this->handleName();
+        $this->handlePath();
 
-        $this->logo('By Èrik Campobadal - erik.cat');
-
-        $this->comment('The package root will be: ' . $path);
         if ($this->confirm('The package creation is going to start, type yes to begin', 'yes')) {
             if (!is_dir($path)) {
                 $this->comment('Creating the root folder...');
