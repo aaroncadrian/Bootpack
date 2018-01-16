@@ -110,8 +110,8 @@ class BootpackCreatePackage extends Command
                     $path . '/src/Http/Middleware/' . ucfirst($p_name) . 'Middleware.php'
                 );
                 rename(
-                    $path . '/src/publishable/migrations/2017_08_11_171401_create_some_table.php',
-                    $path . '/src/publishable/migrations/2017_08_11_171401_create_' . ucfirst($p_name) . '_table.php'
+                    $path . '/publishable/migrations/2017_08_11_171401_create_some_table.php',
+                    $path . '/publishable/migrations/2017_08_11_171401_create_' . ucfirst($p_name) . '_table.php'
                 );
                 rename(
                     $path . '/src/Contracts/Contract.php',
@@ -152,7 +152,7 @@ class BootpackCreatePackage extends Command
                     ]]);
                 } else {
                     $this->line('Skipping the composer dump autoload...');
-                    $this->line('Pleae manually dump the autoload: composer dump-autoload');
+                    $this->line('Please manually dump the autoload: composer dump-autoload');
                 }
 
                 if ($this->confirm('Do you want to create README.md?', 'yes')) {
