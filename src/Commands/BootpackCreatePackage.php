@@ -79,7 +79,7 @@ class BootpackCreatePackage extends Command
 
                 $this->comment('Woah, this is getting dirty, lets create the package structure');
 
-                Helpers::copyDir(__DIR__ . '/../Source', $path . '/src');
+                Helpers::copyDir(__DIR__ . '/../Source', $path);
 
                 $this->info('Package structure created');
 
