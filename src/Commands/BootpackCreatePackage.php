@@ -42,8 +42,7 @@ class BootpackCreatePackage extends Command
         $name = explode('/', $this->argument('name'));
         $p_name = $name[1];
         $name = $name[0] . '/' . $name[1];
-        $path = $this->option('path') ? base_path($this->option('path')) : base_path(config('bootpack.base_path'));
-        $path = $path . '/' . $name;
+        $path = $this->option('path') ? base_path($this->option('path')) : base_path(config('bootpack.base_path') . '/' . $name);
 
         $this->logo('By Èrik Campobadal - erik.cat');
 
