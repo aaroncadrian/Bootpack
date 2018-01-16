@@ -1,5 +1,5 @@
 {
-    "name": "consoletvs/bootpack",
+    "name": "aaroncadrian/bootpack",
     "description": "Laravel 5 package bootstraper",
     "type": "library",
     "require": {
@@ -11,19 +11,19 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Èrik Campobadal",
-            "email": "soc@erik.cat"
+            "name": "Aaron Adrian",
+            "email": "aaroncadrian@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "ConsoleTVs\\Bootpack\\": "src/"
+            "AaronAdrian\\Bootpack\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ConsoleTVs\\Bootpack\\BootpackServiceProvider"
+                "AaronAdrian\\Bootpack\\BootpackServiceProvider"
             ]
         }
     },
