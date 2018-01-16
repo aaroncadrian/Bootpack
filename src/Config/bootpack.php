@@ -6,4 +6,10 @@ return [
     'default_description' => 'Laravel package',
     'default_license' => 'MIT',
     'default_php' => '7.0',
+    'defaults' => [
+        'phpVersion' => '7.0',
+        'license' => 'MIT',
+        'description' => 'Laravel package',
+        'author' => 'Aaron Adrian <aaroncadrian@gmail.com>',
+    ]
 ];
