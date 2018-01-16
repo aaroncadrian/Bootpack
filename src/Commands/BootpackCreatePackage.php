@@ -1,6 +1,6 @@
 <?php
 
-namespace ConsoleTVs\Bootpack\Commands;
+namespace AaronAdrian\Bootpack\Commands;
 
 use ConsoleTVs\Support\Helpers;
 use Illuminate\Console\Command;

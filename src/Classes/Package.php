@@ -1,6 +1,6 @@
 <?php
 
-namespace ConsoleTVs\Bootpack\Classes;
+namespace AaronAdrian\Bootpack\Classes;
 
 use ConsoleTVs\Support\Helpers;
 use Illuminate\Support\Collection;

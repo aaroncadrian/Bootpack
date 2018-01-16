@@ -1,6 +1,6 @@
 <?php
 
-namespace ConsoleTVs\Bootpack;
+namespace AaronAdrian\Bootpack;
 
 use Illuminate\Support\ServiceProvider;
 use ConsoleTVs\Bootpack\Commands\BootpackCreatePackage;
