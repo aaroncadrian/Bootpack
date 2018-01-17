@@ -74,6 +74,9 @@ class BootpackCreatePackage extends Command
     {
         $this->handleName();
         $this->handlePath();
+        $path = $this->path;
+        $name = $this->fullPackageName;
+        $p_name = $this->packageName;
 
         if ($this->confirm('The package creation is going to start, type yes to begin', 'yes')) {
             if (!is_dir($this->path)) {
