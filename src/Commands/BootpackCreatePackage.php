@@ -41,7 +41,8 @@ class BootpackCreatePackage extends Command
 
     protected function handleName()
     {
-        $name = explode('/', $this->argument('name'));
+        $this->fullPackageName = $this->argument('name');
+        $name = explode('/', $this->fullPackageName);
         $this->packageName = $name[1];
         $this->vendorName = $name[0];
     }
