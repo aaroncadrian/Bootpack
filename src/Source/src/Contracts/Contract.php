@@ -2,7 +2,7 @@
 
 namespace {{ NAMESPACE }}\Contracts;
 
-Interface {{ UCNAME }}Contract
+interface {{ UCNAME }}Contract
 {
     //
 }
